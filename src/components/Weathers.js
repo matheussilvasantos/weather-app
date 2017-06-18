@@ -1,5 +1,6 @@
 import React from "react";
 import dateFormat from "dateformat";
+import PropTypes from "prop-types";
 
 function Weather(props) {
   let icon = process.env.PUBLIC_URL + "/weather-icons/" + props.weather.icon + ".svg";
@@ -9,6 +10,11 @@ function Weather(props) {
       <span>{dateFormat(props.now, "dddd, mmmm d")}</span>
     </div>
   )
+}
+
+Weather.propTypes = {
+  weather: PropTypes.object.isRequired,
+  now: PropTypes.number.isRequired
 }
 
 function Weathers(props) {
@@ -26,6 +32,10 @@ function Weathers(props) {
       </ul>
     </div>
   )
+}
+
+Weathers.propTypes = {
+  weathers: PropTypes.array.isRequired
 }
 
 export default Weathers;
