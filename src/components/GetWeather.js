@@ -9,7 +9,6 @@ class GetWeather extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(event) {
     let location = event.target.value;
@@ -19,9 +18,6 @@ class GetWeather extends Component {
         location: location 
       }
     }); 
-  }
-  handleSubmit(event) {
-    event.preventDefault();
   }
   render() {
     return (
