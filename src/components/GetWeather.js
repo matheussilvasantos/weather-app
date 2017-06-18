@@ -21,7 +21,7 @@ class GetWeather extends Component {
   }
   render() {
     return (
-      <div>
+      <div className={this.props.classes}>
         <form method="get" action="/forecast">
           <input
             id="location"
@@ -30,9 +30,15 @@ class GetWeather extends Component {
             autoComplete="off"
             name="location"
             value={this.state.location}
+            className="form-control"
             onChange={this.handleChange}
           />
-          <button type="submit" disabled={!this.state.location}>Buscar Clima</button>
+          <button
+            type="submit"
+            className="btn btn-success"
+            disabled={!this.state.location}>
+              Buscar Clima
+          </button>
         </form>
       </div>
     );

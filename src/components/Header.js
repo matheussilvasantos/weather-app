@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 class Header extends Component {
   render() {
     return (
-      <div>
-        <h2><Link to="/">{this.props.title}</Link></h2>
-        <GetWeather />
+      <div className="header">
+        <h2 className="header__subtitle">
+          <Link to="/">{this.props.title}</Link>
+        </h2>
+        <GetWeather classes="header__get_weather" />
       </div>
     ); 
   }
