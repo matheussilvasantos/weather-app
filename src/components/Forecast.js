@@ -11,8 +11,8 @@ import PropTypes from "prop-types";
 
 function RenderWeathers(props) {
   return(
-    <div>
-      <h1>{props.city.name}</h1>
+    <div className="forecast">
+      <h1 className="forecast_title">{props.city.name}</h1>
       <Weathers weathers={props.weathers} />
     </div>
   )

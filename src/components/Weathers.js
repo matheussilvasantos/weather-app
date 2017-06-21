@@ -6,8 +6,8 @@ function Weather(props) {
   let icon = process.env.PUBLIC_URL + "/weather-icons/" + props.weather.icon + ".svg";
   return(
     <div>
-      <img src={icon} alt={props.weather.main} />
-      <span>{dateFormat(props.now, "dddd, mmmm d")}</span>
+      <img className="weather_item__icon" src={icon} alt={props.weather.main} />
+      <h3 className="weather_item__title">{dateFormat(props.now, "dddd, mmmm d")}</h3>
     </div>
   )
 }
@@ -21,10 +21,10 @@ function Weathers(props) {
   let now = new Date();
   return (
     <div>
-      <ul>
+      <ul className="weather_list">
         {props.weathers.map(function(weather, index) {
           return (
-            <li key={index}>
+            <li key={index} className="weather_item">
               <Weather weather={weather.weather[0]} now={now.setDate(now.getDate() + index)} />
             </li>
           )

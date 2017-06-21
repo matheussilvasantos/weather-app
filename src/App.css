@@ -17,6 +17,27 @@ body {
 .header__get_weather {
   float: right;
 }
+.forecast {
+  text-align: center;
+  padding: 5rem;
+}
+.forecast_title {
+  font-size: 2.5rem;
+}
+.weather_list {
+  list-style-type: none;
+  padding: 0;
+}
+.weather_item {
+  display: inline-block;
+  margin: 1rem;
+}
+.weather_item__icon {
+  width: 10rem;
+}
+.weather_item__title {
+  font-weight: normal;
+}
 .form-control {
   padding: 6px 12px;
   font-size: 14px;
