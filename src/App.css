@@ -7,15 +7,11 @@ body {
   padding: 1.5rem .5rem;
 }
 .header__subtitle {
-  margin: 0;
-  display: inline-block;
+  margin: 0 0 1rem 0;
 }
 .header__subtitle a {
   color: white;
   text-decoration: none;
-}
-.header__get_weather {
-  float: right;
 }
 .forecast {
   text-align: center;
@@ -67,4 +63,12 @@ body {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-
+@media(min-width: 768px) {
+  .header__subtitle {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .header__get_weather {
+    float: right;
+  }
+}
